@@ -1,11 +1,107 @@
 <resources>
 
     <!-- Base application theme. -->
-    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
         <!-- Customize your theme here. -->
         <item name="colorPrimary">@color/colorPrimary</item>
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
         <item name="colorAccent">@color/colorAccent</item>
     </style>
 
+    <style name="labelStyle" parent="android:Widget.TextView">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_gravity">center_horizontal</item>
+
+        <item name="android:padding">0dp</item>
+        <item name="android:layout_marginLeft">64dp</item>
+        <item name="android:layout_marginRight">64dp</item>
+
+        <item name="android:textSize">@dimen/label_text</item>
+        <item name="android:textColor">@color/colorBlack</item>
+    </style>
+
+    <style name="editTextStyle" parent="android:Widget.EditText">
+        <item name="android:layout_marginLeft">64dp</item>
+        <item name="android:layout_marginRight">64dp</item>
+        <item name="android:layout_marginBottom">8dp</item>
+        <item name="android:paddingTop">8dp</item>
+        <item name="android:paddingBottom">8dp</item>
+        <item name="android:paddingLeft">16dp</item>
+        <item name="android:paddingRight">16dp</item>
+
+        <item name="android:textSize">@dimen/normal_text</item>
+        <item name="android:textColor">@color/colorBlack</item>
+        <item name="android:background">@drawable/edit_text</item>
+    </style>
+
+    <style name="buttonStyle" parent="android:Widget.Button">
+
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+
+        <item name="android:paddingTop">8dp</item>
+        <item name="android:paddingBottom">8dp</item>
+        <item name="android:paddingLeft">16dp</item>
+        <item name="android:paddingRight">16dp</item>
+
+        <item name="android:layout_marginLeft">32dp</item>
+        <item name="android:layout_marginRight">32dp</item>
+        <item name="android:layout_marginTop">32dp</item>
+
+        <item name="android:textSize">@dimen/normal_text</item>
+    </style>
+
+    <style name="buttonStyle.roundedButton">
+        <item name="android:background">@drawable/button_rounded</item>
+        <item name="android:textColor">@color/colorWhite</item>
+    </style>
+
+    <style name="buttonStyle.squaredButton">
+        <item name="android:background">@drawable/button_squared</item>
+        <item name="android:textColor">@color/colorWhite</item>
+        <item name="android:padding">2dp</item>
+        <item name="android:layout_margin">0dp</item>
+    </style>
+
+    <style name="pinInputStyle" parent="editTextStyle">
+        <item name="android:minEms">2</item>
+        <item name="android:maxLength">1</item>
+        <item name="android:inputType">number</item>
+        <item name="android:gravity">center</item>
+        <item name="android:cursorVisible">false</item>
+        <item name="android:layout_marginLeft">4dp</item>
+        <item name="android:layout_marginRight">4dp</item>
+        <item name="android:textSize">@dimen/pin_input_text</item>
+        <item name="android:editable">false</item>
+        <item name="android:focusable">false</item>
+    </style>
+
+    <style name="spinnerStyle" parent="android:Widget.Spinner">
+        <item name="android:layout_marginLeft">64dp</item>
+        <item name="android:layout_marginRight">64dp</item>
+        <item name="android:layout_marginBottom">8dp</item>
+        <item name="android:paddingTop">8dp</item>
+        <item name="android:paddingBottom">8dp</item>
+        <item name="android:paddingLeft">16dp</item>
+        <item name="android:paddingRight">16dp</item>
+
+        <item name="android:background">@drawable/edit_text</item>
+        <item name="android:textSize">@dimen/normal_text</item>
+        <item name="android:textColor">@color/colorBlack</item>
+    </style>
+
+    <style name="profileLogoStyle">
+        <item name="android:background">@drawable/profile_logo_background</item>
+        <item name="android:layout_height">@dimen/profile_logo_height</item>
+        <item name="android:layout_width">@dimen/profile_logo_width</item>
+        <item name="android:layout_margin">4dp</item>
+    </style>
+
+    <style name="buttonStyle.roundButton">
+        <item name="android:layout_width">64dp</item>
+        <item name="android:layout_height">64dp</item>
+        <item name="android:text">""</item>
+        <item name="android:background">@drawable/button_round</item>
+    </style>
 </resources>

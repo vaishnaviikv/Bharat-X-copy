@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".BusinessAccountInfoActivity"
+    android:orientation="vertical"
+    android:paddingTop="8dp"
+    android:gravity="center_horizontal">
+
+    <TextView
+        style="@style/labelStyle"
+        android:text="@string/business_account_prompt"/>
+    <Spinner
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        style="@style/spinnerStyle"
+        android:entries="@array/boolean_options" />
+
+    <TextView
+        style="@style/labelStyle"
+        android:text="@string/organisation_name"/>
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        style="@style/editTextStyle"
+        android:inputType="text" />
+
+    <TextView
+        style="@style/labelStyle"
+        android:text="@string/gst_number"/>
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        style="@style/editTextStyle"
+        android:inputType="number" />
+
+    <TextView
+        style="@style/labelStyle"
+        android:text="@string/scale"/>
+    <Spinner
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        style="@style/spinnerStyle"
+        android:entries="@array/business_scales" />
+
+    <!-- Push it to bottom-->
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1" />
+    <!---->
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/submit"
+        style="@style/buttonStyle.squaredButton"
+        android:id="@+id/submit_button"/>
+
+</LinearLayout>
