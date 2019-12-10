@@ -14,14 +14,14 @@
     <string name="employment_status">What do you do?</string>
     <string-array name="employment_status_values">
         <item>Student</item>
-        <item>Vetti payen</item>
         <item>Working</item>
+        <item>Other</item>
     </string-array>
 
     <string name="business_account_prompt">Is this a business account?</string>
     <string-array name="boolean_options">
-        <item>Yes</item>
         <item>No</item>
+        <item>Yes</item>
     </string-array>
 
     <string name="organisation_name">Organisation Name</string>
