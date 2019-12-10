@@ -3,6 +3,7 @@
     <string name="phone_number">Phone Number:</string>
     <string name="send_otp">Send OTP</string>
     <string name="waiting_for_otp">Waiting for automatically detecting OTP…</string>
+    <string name="input_otp">Manually input OTP:</string>
     <string name="next">Next &gt;</string>
     <string name="change_number">&lt; Change number</string>
     <string name="name">Name</string>
