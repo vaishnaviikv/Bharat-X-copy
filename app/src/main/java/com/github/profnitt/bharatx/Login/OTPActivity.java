@@ -1,4 +1,4 @@
-package com.github.profnitt.bharatx;
+package com.github.profnitt.bharatx.Login;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -7,7 +7,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
-import java.net.UnknownServiceException;
+import com.github.profnitt.bharatx.R;
 
 public class OTPActivity extends AppCompatActivity {
 

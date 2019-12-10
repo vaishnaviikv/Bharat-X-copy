@@ -9,11 +9,11 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".BusinessAccountInfoActivity"></activity>
-        <activity android:name=".UserInfoActivity" />
-        <activity android:name=".OTPActivity" />
+        <activity android:name=".Login.BusinessAccountInfoActivity"></activity>
+        <activity android:name=".Login.UserInfoActivity" />
+        <activity android:name=".Login.OTPActivity" />
         <activity
-            android:name=".LoginActivity"
+            android:name=".Login.LoginActivity"
             android:configChanges="orientation|keyboardHidden|screenSize"
             android:label="@string/title_activity_login">
             <intent-filter>
