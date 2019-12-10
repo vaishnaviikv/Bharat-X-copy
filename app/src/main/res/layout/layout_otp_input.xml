@@ -1,34 +1,63 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="horizontal"
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:gravity= "center">
-
-    <EditText
-        android:layout_width="wrap_content"
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <data>
+        <variable name="text"
+            type="String"/>
+        <variable name="focusedInput"
+            type="Integer" />
+    </data>
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        style="@style/pinInputStyle"
-        android:layout_marginTop="4dp"/>
+        android:gravity="center"
+        android:layout_marginTop="32dp">
 
-    <EditText
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        style="@style/pinInputStyle"
-        android:layout_marginTop="4dp" />
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="@style/pinInputStyle"
+            android:layout_marginTop="4dp"
+            android:text="@{text.substring(0,1)}"
+            android:id="@+id/input_one"
+            android:background="@{focusedInput == 0 ? @drawable/edit_text_focused_background :  @drawable/edit_text_default_background}"/>
 
-    <EditText
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        style="@style/pinInputStyle"
-        android:layout_marginTop="4dp" />
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="@style/pinInputStyle"
+            android:layout_marginTop="4dp"
+            android:text="@{text.substring(1,2)}"
+            android:id="@+id/input_two"
+            android:background="@{focusedInput == 1 ? @drawable/edit_text_focused_background :  @drawable/edit_text_default_background}"/>
 
-    <EditText
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        style="@style/pinInputStyle"
-        android:layout_marginTop="4dp" />
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="@style/pinInputStyle"
+            android:layout_marginTop="4dp"
+            android:text="@{text.substring(2,3)}"
+            android:id="@+id/input_three"
+            android:background="@{focusedInput == 2 ? @drawable/edit_text_focused_background :  @drawable/edit_text_default_background}"/>
 
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="@style/pinInputStyle"
+            android:layout_marginTop="4dp"
+            android:text="@{text.substring(3,4)}"
+            android:id="@+id/input_four"
+            android:background="@{focusedInput == 3 ? @drawable/edit_text_focused_background :  @drawable/edit_text_default_background}"/>
 
-</LinearLayout>
+        <EditText
+            android:layout_width="1dp"
+            android:layout_height="1dp"
+            android:id="@+id/hiddenOtpText"
+            android:maxLength="5"
+            android:inputType="number"
+            android:background="@null"
+            android:cursorVisible="false"
+            android:textColor="#00000000"/>
+    </LinearLayout>
+</layout>

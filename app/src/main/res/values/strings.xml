@@ -1,7 +1,5 @@
 <resources>
     <string name="app_name">BharatX</string>
-
-    <string name="title_activity_login">LoginActivity</string>
     <string name="phone_number">Phone Number:</string>
     <string name="send_otp">Send OTP</string>
     <string name="waiting_for_otp">Waiting for automatically detecting OTP…</string>

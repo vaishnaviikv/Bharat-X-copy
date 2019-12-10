@@ -13,9 +13,7 @@
         <activity android:name=".Login.UserInfoActivity" />
         <activity android:name=".Login.OTPActivity" />
         <activity
-            android:name=".Login.LoginActivity"
-            android:configChanges="orientation|keyboardHidden|screenSize"
-            android:label="@string/title_activity_login">
+            android:name=".Login.LoginActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
