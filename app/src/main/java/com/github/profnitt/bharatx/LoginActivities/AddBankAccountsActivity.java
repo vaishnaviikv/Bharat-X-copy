@@ -22,7 +22,7 @@ public class AddBankAccountsActivity extends AppCompatActivity {
         ActivityAddBankAccountsBinding binding = DataBindingUtil.setContentView(this, R.layout.activity_add_bank_accounts);
         binding.banksList.setLayoutManager(new GridLayoutManager(this, 3));
         //TODO
-        ArrayList<BankAccountData> bankAccountData = BankAccountDataSource.getAccountsOfUser("Shyam");
+        ArrayList<BankAccountData> bankAccountData = BankAccountDataSource.getLocallySavedAccounts(this);
         BankAccountListAdapter bankAccountListAdapter = new BankAccountListAdapter(bankAccountData);
         binding.banksList.setAdapter(bankAccountListAdapter);
     }
