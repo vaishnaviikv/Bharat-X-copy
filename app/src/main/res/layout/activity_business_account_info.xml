@@ -6,7 +6,7 @@
         xmlns:tools="http://schemas.android.com/tools"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        tools:context=".Login.BusinessAccountInfoActivity"
+        tools:context=".LoginActivities.BusinessAccountInfoActivity"
         android:orientation="vertical"
         android:paddingTop="8dp"
         android:gravity="center_horizontal">

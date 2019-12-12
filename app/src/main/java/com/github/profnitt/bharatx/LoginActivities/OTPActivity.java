@@ -1,4 +1,4 @@
-package com.github.profnitt.bharatx.Login;
+package com.github.profnitt.bharatx.LoginActivities;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.databinding.DataBindingUtil;
