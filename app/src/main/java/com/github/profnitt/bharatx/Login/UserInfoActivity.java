@@ -30,7 +30,7 @@ final int BusinessOptionIndex = 1;
                 Intent intent;
 
                 if (binding.employmentStatus.getSelectedItemPosition() != BusinessOptionIndex)
-                    intent = new Intent(getApplicationContext(), DashboardActivity.class);
+                    intent = new Intent(getApplicationContext(), AddBankAccountsActivity.class);
                 else
                     intent = new Intent(getApplicationContext(), BusinessAccountInfoActivity.class);
 
