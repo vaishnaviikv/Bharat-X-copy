@@ -6,6 +6,7 @@ import androidx.room.Room;
 
 import java.util.ArrayList;
 
+//TODO implement usage of LiveData
 public class BankAccountDataSource {
     private static BankAccountDataDatabase db = null;
 

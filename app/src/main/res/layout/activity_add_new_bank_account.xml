@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".LoginActivities.AddNewBankAccountActivity"
+        android:orientation="vertical">
+        <TextView
+            style="@style/labelStyle"
+            android:text="Enter bank name:"/>
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            style="@style/editTextStyle"
+            android:inputType="text"
+            android:id="@+id/bank_name_edittext"/>
+
+        <TextView
+            style="@style/labelStyle"
+            android:text="Enter account number:"/>
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            style="@style/editTextStyle"
+            android:inputType="text"
+            android:id="@+id/account_number_edittext"/>
+
+        <!-- Push it to bottom-->
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1" />
+        <!---->
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            style="@style/buttonStyle.squaredButton"
+            android:text="@string/submit"
+            android:id="@+id/submit_button"/>
+    </LinearLayout>
+</layout>

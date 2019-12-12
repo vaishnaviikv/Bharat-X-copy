@@ -9,7 +9,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".LoginActivities.AddBankAccountsActivity"></activity>
+        <activity android:name=".LoginActivities.AddNewBankAccountActivity"></activity>
+        <activity android:name=".LoginActivities.AddBankAccountsActivity" />
         <activity android:name=".LoginActivities.BusinessAccountInfoActivity" />
         <activity android:name=".LoginActivities.UserInfoActivity" />
         <activity android:name=".LoginActivities.OTPActivity" />
