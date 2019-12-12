@@ -26,7 +26,8 @@ public class BankAccountViewHolder extends RecyclerView.ViewHolder implements Vi
             binding.bankName.setText("Add an account");
         }
         else {
-            //TODO: update logo as well
+            //TODO: update logo specific to bank later
+            binding.bankLogo.setImageDrawable(binding.getRoot().getContext().getResources().getDrawable(R.drawable.icon_default_bank_icon));
             binding.bankName.setText(bankData.bankName);
         }
     }
