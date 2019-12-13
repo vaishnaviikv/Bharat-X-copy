@@ -1,4 +1,4 @@
-package com.github.profnitt.bharatx.Login;
+package com.github.profnitt.bharatx.LoginActivities;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;

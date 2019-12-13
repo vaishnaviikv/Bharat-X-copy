@@ -6,46 +6,27 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        tools:context=".LoginActivities.UserInfoActivity"
-        android:orientation="vertical"
-        android:paddingTop="8dp">
-
+        tools:context=".LoginActivities.AddNewBankAccountActivity"
+        android:orientation="vertical">
         <TextView
             style="@style/labelStyle"
-            android:text="@string/name"/>
+            android:text="Enter bank name:"/>
         <EditText
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             style="@style/editTextStyle"
-            android:inputType="text" />
+            android:inputType="text"
+            android:id="@+id/bank_name_edittext"/>
 
         <TextView
             style="@style/labelStyle"
-            android:text="@string/age"/>
+            android:text="Enter account number:"/>
         <EditText
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             style="@style/editTextStyle"
-            android:inputType="number" />
-
-        <TextView
-            style="@style/labelStyle"
-            android:text="@string/aadhaar_number"/>
-        <EditText
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            style="@style/editTextStyle"
-            android:inputType="number" />
-
-        <TextView
-            style="@style/labelStyle"
-            android:text="@string/employment_status"/>
-        <Spinner
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            style="@style/spinnerStyle"
-            android:entries="@array/employment_status_values"
-            android:id="@+id/employment_status"/>
+            android:inputType="text"
+            android:id="@+id/account_number_edittext"/>
 
         <!-- Push it to bottom-->
         <View
@@ -57,9 +38,8 @@
         <Button
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@string/next"
             style="@style/buttonStyle.squaredButton"
-            android:id="@+id/next_button"/>
-
+            android:text="@string/submit"
+            android:id="@+id/submit_button"/>
     </LinearLayout>
 </layout>

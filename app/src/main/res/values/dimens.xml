@@ -9,4 +9,7 @@
 
     <dimen name="profile_logo_height">32dp</dimen>
     <dimen name="profile_logo_width">32dp</dimen>
+
+    <dimen name="bank_acc_logo_width">128dp</dimen>
+    <dimen name="bank_acc_logo_height">128dp</dimen>
 </resources>
