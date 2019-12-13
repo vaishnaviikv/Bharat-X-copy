@@ -1,5 +1,6 @@
 package com.github.profnitt.bharatx.Login;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.databinding.DataBindingUtil;
 import androidx.lifecycle.ViewModelProviders;
@@ -17,16 +18,26 @@ import android.widget.Toast;
 import com.github.profnitt.bharatx.OTPViewModel;
 import com.github.profnitt.bharatx.R;
 import com.github.profnitt.bharatx.databinding.ActivityOtpBinding;
+import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.Task;
+import com.google.firebase.FirebaseException;
+import com.google.firebase.auth.AuthResult;
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseAuthInvalidCredentialsException;
+import com.google.firebase.auth.PhoneAuthCredential;
+import com.google.firebase.auth.PhoneAuthProvider;
 
 public class OTPActivity extends AppCompatActivity implements View.OnClickListener, View.OnKeyListener {
     ActivityOtpBinding binding;
     OTPViewModel otpViewModel;
     boolean canInputOTP = true;
+    String codeSent;
+    FirebaseAuth mAuth;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-
+        mAuth = FirebaseAuth.getInstance();
         binding = DataBindingUtil.setContentView(this, R.layout.activity_otp);
         otpViewModel = ViewModelProviders.of(this).get(OTPViewModel.class);
 
@@ -123,22 +134,67 @@ public class OTPActivity extends AppCompatActivity implements View.OnClickListen
         canInputOTP = true;
     }
 
+    PhoneAuthProvider.OnVerificationStateChangedCallbacks mCallbacks = new PhoneAuthProvider.OnVerificationStateChangedCallbacks() {
+
+        @Override
+        public void onVerificationCompleted(PhoneAuthCredential phoneAuthCredential) {
+
+        }
+
+        @Override
+
+        public void onVerificationFailed(FirebaseException e) {
+
+        }
+
+        @Override
+        public void onCodeSent(String s, PhoneAuthProvider.ForceResendingToken forceResendingToken) {
+            super.onCodeSent(s, forceResendingToken);
+
+            codeSent = s;
+        }
+    };
+
+
     void verifyOTP() {
         //disabling OTP input until OTP is completely verified
         disableOTPInput();
 
         //basic verification of length of OTP
-        if (otpViewModel.getOTPText().getValue().trim().length() != 4) {
-            Toast.makeText(getApplicationContext(), "Please enter 4 digit OTP Pin", Toast.LENGTH_SHORT).show();
+        if (otpViewModel.getOTPText().getValue().trim().length() != 6) {
+            Toast.makeText(getApplicationContext(), "Please enter 6 digit OTP Pin", Toast.LENGTH_SHORT).show();
             enableOTPInput();
             return;
         }
+        String code=otpViewModel.getOTPText().getValue();
 
-        //TODO: implement OTP verification
+        PhoneAuthCredential credential = PhoneAuthProvider.getCredential(codeSent, code);
+        signInWithPhoneAuthCredential(credential);
 
         enableOTPInput();
-        Toast.makeText(getApplicationContext(), "OTP Verified successfully", Toast.LENGTH_SHORT).show();
-        Intent intent = new Intent(getApplicationContext(), UserInfoActivity.class);
-        startActivity(intent);
+
+    }
+
+    private void signInWithPhoneAuthCredential(PhoneAuthCredential credential) {
+        mAuth.signInWithCredential(credential)
+                .addOnCompleteListener(this, new OnCompleteListener<AuthResult>() {
+                    @Override
+                    public void onComplete(@NonNull Task<AuthResult> task) {
+                        if (task.isSuccessful()) {
+                            // Sign in success, update UI with the signed-in user's information
+                            Toast.makeText(getApplicationContext(), "OTP Verified successfully", Toast.LENGTH_SHORT).show();
+                            Intent intent = new Intent(getApplicationContext(), UserInfoActivity.class);
+                            startActivity(intent);
+                        } else {
+                            // Sign in failed, display a message and update the UI
+
+                            if (task.getException() instanceof FirebaseAuthInvalidCredentialsException) {
+                                // The verification code entered was invalid
+                                Toast.makeText(getApplicationContext(), "Incorrect Code", Toast.LENGTH_SHORT).show();
+
+                            }
+                        }
+                    }
+                });
     }
 }

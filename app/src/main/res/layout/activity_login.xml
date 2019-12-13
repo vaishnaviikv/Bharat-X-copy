@@ -24,6 +24,7 @@
             style="@style/labelStyle"
             android:text="@string/phone_number"/>
         <EditText
+            android:id="@+id/phone"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             style="@style/editTextStyle"
