@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "581988915499",
+    "firebase_url": "https://bharatx-cdc47.firebaseio.com",
+    "project_id": "bharatx-cdc47",
+    "storage_bucket": "bharatx-cdc47.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:581988915499:android:23360c9b89a5cf760f0d6e",
+        "android_client_info": {
+          "package_name": "com.github.profnitt.bharatx"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "581988915499-ku6c275j0lk29c9cgadf7i94livl66r4.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.github.profnitt.bharatx",
+            "certificate_hash": "1bd792242335c2c07be9c154c0f69007309dd4d7"
+          }
+        },
+        {
+          "client_id": "581988915499-c0v0icpuuj4rmd3uradrr3q89qgqocki.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBgr2AZtz2BbClZqZi4OcJWHkTWWchuyYA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "581988915499-c0v0icpuuj4rmd3uradrr3q89qgqocki.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
